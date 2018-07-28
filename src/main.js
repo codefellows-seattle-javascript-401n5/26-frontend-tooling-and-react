@@ -1,4 +1,3 @@
-
 import React, {Component, Fragment} from 'react';
 import ReactDom from 'react-dom';
 import faker from 'faker';
@@ -20,7 +19,9 @@ class App extends Component {
   }
   
   handleClick() {
-    this.setState({content: faker.hacker.phrase()});
+    this.setState({
+      content: faker.hacker.phrase(),
+    });
   }
 
   newAnimal(event) {
@@ -65,4 +66,4 @@ class App extends Component {
 }
 
 
-ReactDom.render(<App/>, document.getElementById('talkingCow'));
+ReactDom.render(<App/>, document.getElementById('root'));

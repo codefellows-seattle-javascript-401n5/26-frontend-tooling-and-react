@@ -20,7 +20,7 @@ webpackConfig.output = {
 webpackConfig.plugins = [
   new HtmlWebpackPlugin({
     title: 'React App',
-    template: `${__dirname}/src/index.html`
+    template: `${__dirname}/src/index.html`,
   }),
   // this makes webpack constants
   new DefinePlugin({
@@ -31,21 +31,21 @@ webpackConfig.plugins = [
 webpackConfig.module = {};
 
 webpackConfig.module.rules = [{
-    test: /\.(png|svg|jpg|gif)$/,
-    use: [
-      'file-loader',
-    ],
-  },
-  {
-    test: /\.js$/,
-    exclude: /node_modules/,
-    use: {
-      loader: 'babel-loader',
-      options: {
-        presets: ['env', 'stage-0', 'react'],
-        plugins: ['transform-react-jsx-source'],
-        cacheDirectory: true,
-      },
+  test: /\.(png|svg|jpg|gif)$/,
+  use: [
+    'file-loader',
+  ],
+},
+{
+  test: /\.js$/,
+  exclude: /node_modules/,
+  use: {
+    loader: 'babel-loader',
+    options: {
+      presets: ['env', 'stage-0', 'react'],
+      plugins: ['transform-react-jsx-source'],
+      cacheDirectory: true,
     },
   },
+},
 ];
