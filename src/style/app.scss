@@ -1,0 +1,28 @@
+$color-theme: red;
+$color-scheme: rgb(250,240,211);
+$color-dream: green;
+$color-button: yellow;
+
+body {
+  background-color: $color-scheme;
+  color: $color-theme;
+}
+
+button {
+  background-color: $color-button;
+  padding: 10px 20px;
+  margin-right: 5px;
+
+  &:hover {
+    background-color: $color-scheme
+  }
+}
+
+select {
+  background-color: $color-dream;
+  width: 180px;
+  height: 50px;
+  color: $color-scheme;
+  font-size: 17px;
+}
+
