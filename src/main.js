@@ -49,7 +49,7 @@ class App extends Component {
   render() {
     return (
       <Fragment>
-        <h1>Talking Cow</h1>
+        <h1>Talking Things</h1>
         <button onClick={this.handleClick}>click me, I change the quote.</button>
         <select onChange={this.newAnimal}>
           <option value="squirrel">Talking Squirrel</option>
